@@ -15,13 +15,20 @@ To reproduce synthetic experiment results:
    ```{bash}
    ./runme.sh
    ```
-4. After computations are finished, which may take up to a few days, run `postscripts.R` script to produce resulting plots and computation time statistics, with a command:
+4. After computations has finished, which may take up to a few days, run `postscripts.R` script to generate resulting plots and computation time statistics, with a command:
    ```{bash}
    Rscript postscripts.R
    ```
 
 
 ## Real dataset experiments
+
+After having completed calculations for all datasets (all sections below) which may take up to a few days, run `postscripts.R`script from `real_data_experiments` directory to generate resulting plot, with a command:
+
+```{bash}
+cd real_data_experiments
+Rscript postscripts.R
+```
 
 ### Airbnb dataset
 
@@ -73,9 +80,21 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
 11. In case of a cluster distributed computations, one must manually concatenate the result files 
     
+
+
+### Antigua dataset
+
+To get the antigua results computed, run:
+```{bash}
+mkdir results
+Rscript antigua.R
+```
+
+There is no parallel distributed computation runner, as the computation time is relatively short.
+
 ### Adult dataset
 
-1.  To get the airbnb results computed, run:
+1.  To get the adult results computed, run:
     ```{bash}
     mkdir results
     Rscript adult.R
