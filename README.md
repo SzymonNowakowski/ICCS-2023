@@ -11,11 +11,14 @@ To reproduce synthetic experiment results:
    cd synthetic_experiments
    ```
 2. Update `runme.slurm` file to match your computation cluster settings
-3. To get synthetic experiment results computed run:
+3. To get synthetic experiment results computed, run:
    ```{bash}
    ./runme.sh
    ```
-4. After computations are finished, which may take up to a few days, run `Rscript postscripts.R` to produce resulting plots and computation time statistics
+4. After computations are finished, which may take up to a few days, run `postscripts.R` script to produce resulting plots and computation time statistics, with a command:
+   ```{bash}
+   Rscript postscripts.R
+   ```
 
 
 ## Real dataset experiments
@@ -33,8 +36,9 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     ```
 3.  Download the datasets (files `listings.csv` and `reviews_original.csv`) into the `Data` directory created in the previous step [from this link](https://drive.google.com/drive/folders/1xk5RyR-UgF6M-ddhn11SXHEWJeB0fQo5?usp=sharing)
 4.  ```{bash}
-    python3 -m venv ~/venv/airbnb
-    source ~/venv/airbnb/bin/activate
+    mkdir ./venv
+    python3 -m venv ./venv/airbnb
+    source ./venv/airbnb/bin/activate
     pip install -r requirements.txt
     ```
 5.  Generate a file with review sentiment (it creates `reviews_cleaned.csv`): 
@@ -52,8 +56,18 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
 8.  ```{bash}
     cd ..
     ```
-9.  Create the `data_airbnb` folder & move the 6 final data files into `data_airbnb` folder
-10. To get the airbnb results computed run:
+9.  Create the `data_airbnb` folder & move the 6 final data files into `data_airbnb` folder:
     ```{bash}
+    mkdir data_airbnb
+    mv Data/data_cleaned_*.csv data_airbnb
+    ```
+10. To get the airbnb results computed, run:
+    ```{bash}
+    mkdir results
     Rscript airbnb.R
     ```
+    or alternatively, run the distributed computations (making sure the `run_something.slurm` file matches your computation cluster settings) with:
+    ```{bash}
+    ./run_airbnb.sh
+    ```
+    this last command runs `run_something.sh` script with appropriate parameters, which in turns creates a SLURM job with `run_something.slurm` file.

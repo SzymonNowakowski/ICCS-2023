@@ -1,0 +1,10 @@
+numpy
+matplotlib
+Keras
+scipy
+pandas
+Shapely
+geopandas
+textblob
+statsmodels
+scikit_learn
