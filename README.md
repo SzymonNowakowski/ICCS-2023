@@ -66,8 +66,23 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     mkdir results
     Rscript airbnb.R
     ```
-    or alternatively, run the distributed computations (making sure the `run_something.slurm` file matches your computation cluster settings) with:
+    or, alternatively, run the distributed computations (making sure the `run_something.slurm` file matches your computation cluster settings) with:
     ```{bash}
     ./run_airbnb.sh
     ```
-    this last command runs `run_something.sh` script with appropriate parameters, which in turns creates a SLURM job with `run_something.slurm` file.
+    this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
+11. In case of a cluster distributed computations, one must manually concatenate the result files 
+    
+### Adult dataset
+
+1.  To get the airbnb results computed, run:
+    ```{bash}
+    mkdir results
+    Rscript adult.R
+    ```
+    or, alternatively, run the distributed computations (making sure the `run_something.slurm` file matches your computation cluster settings) with:
+    ```{bash}
+    ./run_adult.sh
+    ```
+    this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
+2. In case of a cluster distributed computations, one must manually concatenate the result files 
