@@ -1,0 +1,54 @@
+./run_something.sh promoter 0.7 4 11
+./run_something.sh promoter 0.7 4 12
+./run_something.sh promoter 0.7 4 13
+./run_something.sh promoter 0.7 4 14
+./run_something.sh promoter 0.7 4 15
+./run_something.sh promoter 0.7 4 16
+./run_something.sh promoter 0.7 4 17
+./run_something.sh promoter 0.7 4 18
+./run_something.sh promoter 0.7 4 19
+./run_something.sh promoter 0.7 4 1a
+./run_something.sh promoter 0.7 4 1b
+./run_something.sh promoter 0.7 4 1c
+./run_something.sh promoter 0.7 4 1d
+./run_something.sh promoter 0.7 4 1e
+./run_something.sh promoter 0.7 4 1f
+./run_something.sh promoter 0.7 4 1g
+./run_something.sh promoter 0.7 4 1h
+./run_something.sh promoter 0.7 4 1i
+./run_something.sh promoter 0.7 4 1j
+./run_something.sh promoter 0.7 4 1k
+
+./run_something.sh promoter 0.7 4 21
+./run_something.sh promoter 0.7 4 22
+./run_something.sh promoter 0.7 4 23
+./run_something.sh promoter 0.7 4 24
+./run_something.sh promoter 0.7 4 25
+./run_something.sh promoter 0.7 4 26
+./run_something.sh promoter 0.7 4 27
+./run_something.sh promoter 0.7 4 28
+./run_something.sh promoter 0.7 4 29
+./run_something.sh promoter 0.7 4 2a
+./run_something.sh promoter 0.7 4 2b
+./run_something.sh promoter 0.7 4 2c
+./run_something.sh promoter 0.7 4 2d
+./run_something.sh promoter 0.7 4 2e
+./run_something.sh promoter 0.7 4 2f
+./run_something.sh promoter 0.7 4 2g
+./run_something.sh promoter 0.7 4 2h
+./run_something.sh promoter 0.7 4 2i
+./run_something.sh promoter 0.7 4 2j
+./run_something.sh promoter 0.7 4 2k
+
+./run_something.sh promoter 0.7 4 31
+./run_something.sh promoter 0.7 4 32
+./run_something.sh promoter 0.7 4 33
+./run_something.sh promoter 0.7 4 34
+./run_something.sh promoter 0.7 4 35
+./run_something.sh promoter 0.7 4 36
+./run_something.sh promoter 0.7 4 37
+./run_something.sh promoter 0.7 4 38
+./run_something.sh promoter 0.7 4 39
+./run_something.sh promoter 0.7 4 3a
+
+

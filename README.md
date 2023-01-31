@@ -23,7 +23,7 @@ To reproduce synthetic experiment results:
 
 ## Real data experiments
 
-After having completed calculations for all data sets (all sections below) which may take up to a few days, run `postscripts.R`script from `real_data_experiments` directory to generate resulting plot, with a command:
+After having completed calculations for all data sets (all sections below) which may take up to a few days, run `postscripts.R`script from `real_data_experiments` directory to generate resulting plot, with commands:
 
 ```{bash}
 cd real_data_experiments
@@ -68,7 +68,7 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     mkdir data_airbnb
     mv Data/data_cleaned_*.csv data_airbnb
     ```
-10. To get the airbnb results computed, run:
+10. To get the Airbnb results computed, run:
     ```{bash}
     mkdir results
     Rscript airbnb.R
@@ -78,13 +78,13 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     ./run_airbnb.sh
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
-11. In case of a cluster distributed computations, one must manually concatenate the result files 
+11. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
     
 
 
 ### Antigua data set
 
-To get the antigua results computed, run:
+To get the Antigua results computed, run:
 ```{bash}
 cd real_data_experiments
 mkdir results
@@ -105,7 +105,7 @@ There is no parallel distributed computation runner, as the computation time is 
     mkdir data_insurance
     ```
 3.  Download the `test.csv` into the `data_insurance` directory created in a previous step from [this Kaggle link](https://www.kaggle.com/c/prudential-life-insurance-assessment/data)
-4.  To get the insurance results computed, run:
+4.  To get the Insurance results computed, run:
     ```{bash}
     Rscript insurance.R
     ```
@@ -114,13 +114,13 @@ There is no parallel distributed computation runner, as the computation time is 
     ./run_insurance.sh
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
-5. In case of a cluster distributed computations, one must manually concatenate the result files 
+5. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
 
 
 
 ### Adult data set
 
-1.  To get the adult results computed, run:
+1.  To get the Adult results computed, run:
     ```{bash}
     cd real_data_experiments
     mkdir results
@@ -132,4 +132,20 @@ There is no parallel distributed computation runner, as the computation time is 
     ./run_adult.sh
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
-2. In case of a cluster distributed computations, one must manually concatenate the result files 
+2. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
+
+### Promoter data set
+
+1.  To get the Promoter results computed, run:
+    ```{bash}
+    cd real_data_experiments
+    mkdir results
+    Rscript promoter.R
+    ```
+    or, alternatively, run the distributed computations (making sure the `run_something.slurm` file matches your computation cluster settings) with:
+    ```{bash}
+    cd real_data_experiments
+    ./run_promoter.sh
+    ```
+    this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
+2. In case of a cluster-based distributed computations, one must manually concatenate the 50 result files 
