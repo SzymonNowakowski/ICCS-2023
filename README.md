@@ -95,7 +95,7 @@ There is no parallel distributed computation runner, as the computation time is 
 
 ### Insurance data set
 
-1.  Enter `real_data_experiments` dirtectory:
+1.  Enter `real_data_experiments` directory:
     ```{bash}
     cd real_data_experiments
     ```
