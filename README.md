@@ -8,7 +8,7 @@ Contents of this repository:
 
 - the code to reproduce the simulation results. 
 
-The code requires that the `R` package `DMRnet` to be installed in version >= 0.3.4.
+The code requires that the `R` package `DMRnet` is installed in version >= 0.3.4.
 
 ## Authors
 
