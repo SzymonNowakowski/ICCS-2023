@@ -6,7 +6,9 @@ Contents of this repository:
 
 - supplement to the submitted paper (`supplement.pdf`)
 
-- the code to reproduce the simulation results
+- the code to reproduce the simulation results. 
+
+The code requires that the `R` package `DMRnet` to be installed in version >= 0.3.4.
 
 ## Authors
 
@@ -53,7 +55,7 @@ To reproduce synthetic experiment results:
    Rscript postscripts.R
    ```
 
-   `postscripts.R`script reads the contents of `results_iccs` directory (where all the result files of synthetic numeric simulations get written to), prints out median wall times and produces two plots: `ICCS_RMSE.ps` and `ICCS_MD.ps`.  
+   `postscripts.R`script reads the contents of the `results_iccs` directory (where all the result files of synthetic numeric simulations get written to), prints out median wall times for SNR values 3.0 and 4.0 and produces two plots: `ICCS_RMSE.ps` and `ICCS_MD.ps`.  
 
 ## Real data experiments
 
@@ -64,7 +66,9 @@ cd real_data_experiments
 Rscript postscripts.R
 ```
 
-`postscripts.R`script reads the contents of `results` directory (where all the result files of numeric simulations with real data get written to) and produces a `pic_full_names.ps` plot. 
+`postscripts.R`script reads the contents of the `results` directory (where all the result files of numeric simulations with real data get written to) and produces a `pic_full_names.ps` plot. 
+
+**Please note that the exact results of the distributed and non-distributed computations may differ due to the different seed values set for the pseudorandom number generator in each case.**
 
 ### Airbnb data set
 
