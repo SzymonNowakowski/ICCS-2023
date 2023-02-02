@@ -1,21 +1,21 @@
 library(latex2exp)
 
-one_plot<-function(algo_list, snr_list, res_0.5, setting, md, text_y="RMSE / RMSE(oracle)", ylim=c(0,20), ybar=FALSE) {
-        algo_nice_names = c(gic.PDMR="PDMR", gic.DMRnet="DMR", scope8="SCOPE-8", scope32="SCOPE-32", grMCP="group MCP", grLasso="group LASSO", RF="Random Forests")
-        colors <- palette("Okabe-Ito")[2:9]
+one_plot<-function(algo_list, snr_list, res_0.5, setting, md, text_y="RMSE / RMSE(oracle)", ylim=c(1.6,12.2), ybar=FALSE) {
+        algo_nice_names = c(gic.PDMR="PDMR", gic.DMRnet="DMR", scope8="S-8", scope32="S-32", grMCP="gM", grLasso="gL", RF="RF")
+        colors <- palette("Okabe-Ito")[c(1,1,2,2,3,3,8)]
         xlim <- c(snr_list[1], snr_list[length(snr_list)])
 
 
         should_legend <- (setting == 1)
 
-        matplot(snr_list,res_0.5, type="l", lty=c(1,1,1,1,2,2,2), col=colors, lwd=1.5,
+        matplot(snr_list,res_0.5, type="l", lty=c(1,2,1,2,1,2,1), col=colors, lwd=2.0,
         xlab="",
         ylab="",
         cex=1.4, cex.lab=1.4,
         main=TeX(paste("Setting ", setting, ", True $MD=", md, "$", sep="")), cex.main=2.2, font.main=1,
         ylim=ylim, xlim=xlim )
-
-        if (should_legend) legend("topleft", algo_nice_names[algo_list], lty=c(1,1,1,1,2,2,2), lwd=1.5, cex=1.4 , col=colors)
+        
+        if (should_legend) legend("topleft", algo_nice_names[algo_list], lty=c(1,2,1,2,1,2,1), lwd=2.0, cex=1.4 , col=colors)
         mtext("SNR", side=1, line=2.4, col="black", cex=1)  #xlab
         mtext(text_y, side=2, line=2.4, col="black", cex=1)  #ylab
         if (ybar)
@@ -103,7 +103,7 @@ for (setting_selector in 1:6) {
               }
             }
           }
-          one_plot(algs, res_snr, res_0.5, setting_selector, oracle_md, text_y="Estimated MD / True MD", ylim=c(0,7), ybar=TRUE)
+          one_plot(algs, res_snr, res_0.5, setting_selector, oracle_md, text_y="Estimated MD / True MD", ylim=c(0.4,7.2), ybar=TRUE)
 
 }
 
