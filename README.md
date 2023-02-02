@@ -43,7 +43,7 @@ To reproduce synthetic experiment results:
    cd synthetic_experiments
    ```
 
-2. Update `run_synthetic.slurm` file to match your computation cluster settings
+2. Update `run_synthetic.slurm` file to match your computation cluster settings.
 
 3. To get synthetic experiment results computed, run:
    ```{bash}
@@ -66,7 +66,7 @@ cd real_data_experiments
 Rscript postscripts.R
 ```
 
-`postscripts.R`script reads the contents of the `results` directory (where all the result files of numeric simulations with real data get written to) and produces a `pic_full_names.ps` plot. 
+`postscripts.R`script reads the contents of the `results` directory (where all the result files of numeric simulations with real data get written to) and produces a `ICCS_real_data.ps` plot. 
 
 **Please note that the exact results of the distributed and non-distributed computations may differ due to the different seed values set for the pseudorandom number generator in each case.**
 
@@ -128,7 +128,7 @@ To preprocess the data, follow instructions from [Kalehbasti et al. GitHub](http
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
 
-11. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
+11. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files.
     
 
 
@@ -156,7 +156,7 @@ There is no parallel distributed computation runner, as the computation time is 
     mkdir data_insurance
     ```
 
-3.  Download the `test.csv` into the `data_insurance` directory created in a previous step from [this Kaggle link](https://www.kaggle.com/c/prudential-life-insurance-assessment/data)
+3.  Download the `test.csv` into the `data_insurance` directory created in a previous step from [this Kaggle link](https://www.kaggle.com/c/prudential-life-insurance-assessment/data).
 
 4.  To get the Insurance results computed, run:
     ```{bash}
@@ -168,7 +168,7 @@ There is no parallel distributed computation runner, as the computation time is 
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
 
-5. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
+5. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files. 
 
 
 
@@ -187,7 +187,7 @@ There is no parallel distributed computation runner, as the computation time is 
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
 
-2. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files 
+2. In case of a cluster-based distributed computations, one must manually concatenate the 20 result files. 
 
 ### Promoter data set
 
@@ -204,4 +204,4 @@ There is no parallel distributed computation runner, as the computation time is 
     ```
     this last command runs `run_something.sh` script with appropriate parameters, which in turn creates a SLURM job with `run_something.slurm` file.
 
-2. In case of a cluster-based distributed computations, one must manually concatenate the 50 result files 
+2. In case of a cluster-based distributed computations, one must manually concatenate the 50 result files. 

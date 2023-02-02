@@ -15,6 +15,7 @@ alg_rf <- c("PDMR","DMR",
       #"Pr","Dr",
       "S-8","S-32", "gMCP","gL", "RF")#,"L")
 
+mdU=30
 
 #######   a i r b n b
 set_name <- "Airbnb:"
@@ -35,13 +36,14 @@ A1 <- read.csv("results/airbnb_model_sizes.csv")
 A1 <- cbind(A1, rep(100, 200))
 A1 <- A1[,c(2, 3,    7, 7,     5, 6)]#, 12)]
 colnames(A1) <- alg
-vioplot(A1,outline=FALSE, main=paste(set_name,"MD"),  ylim=c(0,60), col=color_palette[1:ncol(A)], cex.axis=0.7)
-text(3,30,substitute(paste(italic("not available"))), srt = 90)
-text(4,30,substitute(paste(italic("not available"))), srt = 90)
+ypos <- mdU/2
+vioplot(A1,outline=FALSE, main=paste(set_name,"MD"),  ylim=c(0,mdU), col=color_palette[1:ncol(A)], cex.axis=0.7)
+text(3, ypos, substitute(paste(italic("not available"))), srt = 90)
+text(4, ypos, substitute(paste(italic("not available"))), srt = 90)
 
 
 
-mdU=30
+
 #######   a n t i g u a
 set_name <- "Antigua:"
 A <- read.csv("results/antigua_errors.csv")
@@ -71,7 +73,7 @@ text(7, ypos, substitute(paste(italic("not available"))), srt = 90)
 A1 <- read.csv("results/insurance_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
 colnames(A1)=alg
-vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,60), col=color_palette[1:ncol(A1)], cex.axis=0.7)
+vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,mdU), col=color_palette[1:ncol(A1)], cex.axis=0.7)
 
 
 alg <- c("PDMR","DMR",
@@ -105,7 +107,7 @@ vioplot(A,outline=FALSE, main=paste(set_name,"PE"),  ylim=c(0,.30), col=color_pa
 A1 <- read.csv("results/promoter_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
 colnames(A1)=alg
-vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,15), col=color_palette[1:ncol(A1)], cex.axis=0.65)
+vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,mdU), col=color_palette[1:ncol(A1)], cex.axis=0.65)
 
 
 
