@@ -1,7 +1,7 @@
 library(latex2exp)
 
 one_plot<-function(algo_list, snr_list, res_0.5, setting, md, text_y="RMSE / RMSE(oracle)", ylim=c(1.6,12.2), ybar=FALSE) {
-        algo_nice_names = c(gic.PDMR="PDMR", gic.DMRnet="DMR", scope8="S-8", scope32="S-32", grMCP="gM", grLasso="gL", RF="RF")
+        algo_nice_names = c(gic.PDMR="PDMR", gic.DMRnet="DMR", scope8="S-8", scope32="S-32", grMCP="gMCP", grLasso="gL", RF="RF")
         colors <- palette("Okabe-Ito")[c(1,1,2,2,3,3,8)]
         xlim <- c(snr_list[1], snr_list[length(snr_list)])
 

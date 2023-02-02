@@ -22,10 +22,14 @@ A <- read.csv("results/airbnb_errors.csv")
 A <- cbind(A, rep(1.0, 200))
 A <- A[,c(2, 3,     7, 7,    5, 6, 7)]#3, 8, 6, 11,     17, 17,    13, 16, 12)]
 colnames(A) <- alg_rf
-vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(.05,0.4), col=color_palette[1:ncol(A)], cex.axis=0.7)
-text(3,0.05+(0.4-0.05)/2,substitute(paste(italic("not available"))), srt = 90)
-text(4,0.05+(0.4-0.05)/2,substitute(paste(italic("not available"))), srt = 90)
-text(7,0.05+(0.4-0.05)/2,substitute(paste(italic("not available"))), srt = 90)
+A <- sapply(A, sqrt)
+ymin <- 0.3
+ymax <- 0.6
+ypos <- ymin+(ymax-ymin)/2
+vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(ymin,ymax), col=color_palette[1:ncol(A)], cex.axis=0.7)
+text(3, ypos, substitute(paste(italic("not available"))), srt = 90)
+text(4, ypos, substitute(paste(italic("not available"))), srt = 90)
+text(7, ypos, substitute(paste(italic("not available"))), srt = 90)
 
 A1 <- read.csv("results/airbnb_model_sizes.csv")
 A1 <- cbind(A1, rep(100, 200))
@@ -43,7 +47,8 @@ set_name <- "Antigua:"
 A <- read.csv("results/antigua_errors.csv")
 A <- A[,c(2, 3,     5, 4, 8, 9, 7)]#, 14)]
 colnames(A) <- alg_rf
-vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(.5,2), col=color_palette[1:ncol(A)], cex.axis=0.7)
+A <- sapply(A, sqrt)
+vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(sqrt(.5),sqrt(2)), col=color_palette[1:ncol(A)], cex.axis=0.7)
 
 A1 <- read.csv("results/antigua_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
@@ -56,10 +61,12 @@ A <- read.csv("results/insurance_errors.csv")
 A <- A[,c(2, 3,     5, 4, 7, 8)]#, 14)]
 A <- cbind(A, rep(10, nrow(A)))
 colnames(A) <- alg_rf
-ymin <- 4.0
-ymax <- 5.8
+A <- sapply(A, sqrt)
+ymin <- sqrt(4.0)
+ymax <- sqrt(5.8)
+ypos <- ymin+(ymax-ymin)/2
 vioplot(A, outline=FALSE, main=paste(set_name,"PE"), col=color_palette[1:ncol(A)], cex.axis=0.7, ylim=c(ymin, ymax))
-text(7,ymin+(ymax-ymin)/2,substitute(paste(italic("not available"))), srt = 90)
+text(7, ypos, substitute(paste(italic("not available"))), srt = 90)
 
 A1 <- read.csv("results/insurance_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
@@ -80,7 +87,7 @@ set_name <- "Adult:"
 A <- read.csv("results/adult_errors.csv")
 A <- A[,c(2, 3,     5, 4, 8, 9, 7)]#, 14)]
 colnames(A)=alg_rf
-vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(.17,.3), col=color_palette[1:ncol(A)], cex.axis=0.65)
+vioplot(A,outline=FALSE, main=paste(set_name,"PE"), ylim=c(.175,.26), col=color_palette[1:ncol(A)], cex.axis=0.65)
 
 A1 <- read.csv("results/adult_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
@@ -98,7 +105,7 @@ vioplot(A,outline=FALSE, main=paste(set_name,"PE"),  ylim=c(0,.30), col=color_pa
 A1 <- read.csv("results/promoter_model_sizes.csv")
 A1 <- A1[,c(2, 3,     5, 4, 7, 8)]#, 14)]
 colnames(A1)=alg
-vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,mdU), col=color_palette[1:ncol(A1)], cex.axis=0.65)
+vioplot(A1,outline=FALSE, main=paste(set_name,"MD"), ylim=c(0,15), col=color_palette[1:ncol(A1)], cex.axis=0.65)
 
 
 
