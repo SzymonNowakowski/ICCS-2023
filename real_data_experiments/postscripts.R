@@ -1,7 +1,7 @@
 library(vioplot)
 
 
-postscript("pic_full_names.ps", horizontal=FALSE,onefile=FALSE)
+postscript("ICCS_real_data.ps", horizontal=FALSE,onefile=FALSE)
 
 par(mfrow=c(5,2), mai=c(0.4, 0.4, 0.25, 0.08), cex=.9, cex.main=1.3, cex.lab=6)
 color_palette <- palette("Okabe-Ito")[2:9]

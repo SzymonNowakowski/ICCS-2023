@@ -1,5 +1,5 @@
 
-adult.train<-read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test", header=FALSE, comment.char="|", stringsAsFactors = TRUE)
+adult.train<-read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data", header=FALSE, comment.char="|", stringsAsFactors = TRUE)
 adult.test<-read.csv("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test", header=FALSE, comment.char="|", stringsAsFactors = TRUE)
 
 colnames <- c('age', #
