@@ -4,7 +4,7 @@ Supplementary material to *Improving Group Lasso for high-dimensional categorica
 
 Contents of this repository:
 
-- supplement to the submitted paper (`supplement.pdf`)
+- supplement to the submitted paper: [`supplement.pdf`](https://github.com/SzymonNowakowski/ICCS-2023/blob/main/supplement.pdf)
 
 - the code to reproduce the simulation results. 
 

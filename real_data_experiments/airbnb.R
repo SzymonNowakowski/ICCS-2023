@@ -16,7 +16,11 @@ for (i in 1:4)
 
 
 ####HURRAY. In total 49976 observations (train+test) + host_id factor with 39393 levels as in Rosset's paper
-########I didn't perform variable selection step as DMRnet does that too but better. So there are 768 columns (much more than Rosset has)
+########I didn't perform variable selection step as DMRnet does that too but better. 
+
+# out of those 768 columns 
+# there is one constant categorical column (country) with only 1 level and 2 continous constant columns (with sd=0), 
+# so 765 predictive columns in total  
 
 cat("data loaded\n")
 

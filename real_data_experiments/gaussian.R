@@ -82,7 +82,7 @@ gaussian <- function(allX, ally, factor_columns, model_choices, set_name, train_
 
 
       #removing columns with only one value:
-      singular_columns<-which(sapply(lapply(data.train.percent.x, unique), length)==1) #for continous columns length is 0
+      singular_columns<-which(sapply(lapply(data.train.percent.x, unique), length)==1) 
       if (length(singular_columns)>0) {
         data.test.percent.x <- data.test.percent.x[,-singular_columns]
         data.train.percent.x <- data.train.percent.x[,-singular_columns]
